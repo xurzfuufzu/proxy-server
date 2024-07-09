@@ -8,7 +8,7 @@ The **Proxy Server** project is an HTTP server designed to proxy requests to thi
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/xurzfuufzu/proxy-server.git
-   cd Hl-task1
+   cd proxy-server
    ```
 2. **Build the Docker images:**
    ```bash
@@ -19,7 +19,7 @@ The **Proxy Server** project is an HTTP server designed to proxy requests to thi
    make up
    ```
 
-    ## Request Format
+   ## Request Format
 
 The server expects a JSON request with the following fields:
 
@@ -31,16 +31,16 @@ The server expects a JSON request with the following fields:
 }
 ```
 
-    ## Response Format
+   ## Response Format
 
 The response to the client should be in JSON format with the following fields:
 
 ```
 {
 "id": "requestId",
-"status": <HTTP-статус ответа стороннего сервиса>,
-"headers": { "массив заголовков из ответа стороннего сервиса" },
-"length": <длина содержимого ответа>
+"status": <HTTP status code from the third-party service response>,
+"headers": { "array of headers from the third-party service response" },
+"length": <length of the response content>
 }
 ```
 
@@ -59,9 +59,6 @@ The response to the client should be in JSON format with the following fields:
         "Authentication": "Basic bG9naW46cGFzc3dvcmQ="
     }   
 }
-
-
-
 ```
 **Example Response:**
 ```json
