@@ -19,7 +19,7 @@ The **Proxy Server** project is an HTTP server designed to proxy requests to thi
    make up
    ```
 
-   ## Request Format
+## Request Format
 
 The server expects a JSON request with the following fields:
 
@@ -31,7 +31,7 @@ The server expects a JSON request with the following fields:
 }
 ```
 
-   ## Response Format
+## Response Format
 
 The response to the client should be in JSON format with the following fields:
 
